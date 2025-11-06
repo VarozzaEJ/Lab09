@@ -340,11 +340,11 @@ public class ListTester {
 	}
 	private Scenario<Integer> emptyList_addToRearA_A = () -> emptyList_addToRearA_A();
 	 
-	/** Scenario #04: [] -> add(A) -> [A] 
+	/** Scenario #04: [] -> add(A) -> [A] Evan 
 	 * @return [A] after add(A)
 	 */
 
-	/** Scenario #05: [] -> add(0, A) -> [A] 
+	/** Scenario #05: [] -> add(0, A) -> [A] Nazifa
 	 * @return [A] after add(0, A)
 	 */
 
@@ -388,7 +388,7 @@ public class ListTester {
 	}
 	private Scenario<Integer> A_removeFirst_emptyList = () -> A_removeFirst_emptyList();
 
-	/** Scenario #13: [A] -> removeLast() -> [] 
+	/** Scenario #13: [A] -> removeLast() -> [] Gabe
 	 * @return [] after removeLast()
 	 */
 
@@ -402,7 +402,7 @@ public class ListTester {
 	}
 	private Scenario<Integer> A_removeA_emptyList = () -> A_removeA_emptyList();
 
-	/** Scenario #15: [A] -> remove(0) -> [] 
+	/** Scenario #15: [A] -> remove(0) -> [] Wesley
 	 * @return [] after remove(0)
 	 */
 
@@ -412,12 +412,12 @@ public class ListTester {
 	 */
 
 	 
-	/** Scenario #17: [A,B] -> addToFront(C) -> [C,A,B] 
+	/** Scenario #17: [A,B] -> addToFront(C) -> [C,A,B] Evan
 	 * @return [C,A,B] after addToFront(C)
 	 */
 
 	 
-	/** Scenario #20: [A,B] -> addAfter(C,B) -> [A,B,C] 
+	/** Scenario #20: [A,B] -> addAfter(C,B) -> [A,B,C] Nazifa
 	 * @return [A,B,C] after addAfter(C,B)
 	 */
 
@@ -427,7 +427,7 @@ public class ListTester {
 	 */
 
 	 
-	/** Scenario #25: [A,B] -> removeFirst() -> [B]
+	/** Scenario #25: [A,B] -> removeFirst() -> [B] Gabe
 	 * @return [B] after removeFirst()
 	 */
 
@@ -448,7 +448,7 @@ public class ListTester {
 	 */
 
 	 
-	/** Scenario #28: [A,B] -> remove(B) -> [A]
+	/** Scenario #28: [A,B] -> remove(B) -> [A] Wesley
 	 * @return [A] after remove(B)
 	 */
 
