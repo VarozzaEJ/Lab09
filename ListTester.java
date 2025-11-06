@@ -794,7 +794,7 @@ public class ListTester {
 
 	////////////////////////////////// Daniel Test
 	//XXX Tests for 3-element list
-	//////////////////////////////////
+	//////////////////////////////////git hub test
 	
 	/** Run all tests on scenarios resulting in a three-element list
 	 * @param scenario lambda reference to scenario builder method
