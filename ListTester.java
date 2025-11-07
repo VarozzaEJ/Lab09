@@ -346,11 +346,11 @@ public class ListTester {
 	 */
 
 	/** Scenario #05: [] -> add(0, A) -> [A] Nazifa
-	 * @return [A] after add(0, A)//
+	 * @return [A] after add(0, A)// Scenario 5 is done
 	 */
 	private IndexedUnsortedList<Integer> emptyList_addTo0Index_A() {
 		IndexedUnsortedList<Integer> list = newList();
-		list.add(0,ELEMENT_A);//
+		list.add(0,ELEMENT_A);
 		return list;
 
 	}
