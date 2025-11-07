@@ -188,7 +188,6 @@ public class ListTester {
 		testEmptyList(A_removeA_emptyList, "A_removeA_emptyList");
 			// Scenario: 15
 		testEmptyList(A_remove0_emptyList, "A_remove0_emptyList");
-
 			// Scenario: 44
 
 
@@ -199,7 +198,6 @@ public class ListTester {
 		testTwoElementList(A_addToRearB_AB, "A_addToRearB_AB", LIST_AB, STRING_AB);
 			// Scenario: 10
 		testTwoElementList(A_add0B_BA, "A_addToIndex0B_BA", LIST_BA, STRING_BA);
-			
 		//1-element to changed 1-element via set()
 			// Scenario: 16
 
@@ -231,7 +229,6 @@ public class ListTester {
 
 			// Scenario: 20 
 		testThreeElementList(AB_addAfterBC_ABC, "AB_addAfterBC_ABC", LIST_ABC, STRING_ABC);
-
 			// Scenario: 23
 
 			
