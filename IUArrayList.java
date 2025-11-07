@@ -145,7 +145,7 @@ public class IUArrayList<E> implements IndexedUnsortedList<E> {
 
 	@Override
 	public E last() {
-		return array[rear - 1];
+		return this.array[rear - 1];
 	}
 
 	@Override
@@ -161,6 +161,7 @@ public class IUArrayList<E> implements IndexedUnsortedList<E> {
 	@Override
 	public int size() {
 		return array.length;
+		//this wont work actually because array.length is the number of elements the array can hold, not how many are in the array.
 	}
 
 	@Override
