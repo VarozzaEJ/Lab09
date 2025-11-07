@@ -160,14 +160,7 @@ public class IUArrayList<E> implements IndexedUnsortedList<E> {
 
 	@Override
 	public int size() {
-		int count = 0;
-		for(int i = 0; i < array.length; i++) {
-			if(array[i] != null) {
-				count++;
-			}
-		}
-		return count;
-		//If we can add a count variable, we should do that instead!
+		return this.rear;
 	}
 
 	@Override
