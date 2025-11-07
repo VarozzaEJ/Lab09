@@ -187,6 +187,7 @@ public class ListTester {
 			// Scenario: 14
 		testEmptyList(A_removeA_emptyList, "A_removeA_emptyList");
 			// Scenario: 15
+		testEmptyList(A_remove0_emptyList, "A_remove0_emptyList");
 
 			// Scenario: 44
 
@@ -215,7 +216,7 @@ public class ListTester {
 			// Scenario: 27
 
 			// Scenario: 28
-
+		testSingleElementList(AB_removeB_A, "AB_removeB_A", LIST_A, STRING_A);
 			// Scenario: 29
 
 			// Scenario: 30
@@ -413,6 +414,12 @@ public class ListTester {
 	/** Scenario #15: [A] -> remove(0) -> [] Wesley
 	 * @return [] after remove(0)
 	 */
+	private IndexedUnsortedList<Integer> A_remove0_emptyList() {
+		IndexedUnsortedList<Integer> list = emptyList_addToFrontA_A();
+		list.remove(0);
+		return list;
+	}
+	private Scenario<Integer> A_remove0_emptyList = () -> A_remove0_emptyList();
 
 	 
 	/** Scenario #16: [A] -> set(0,B) -> [B] 
@@ -463,6 +470,12 @@ public class ListTester {
 	/** Scenario #28: [A,B] -> remove(B) -> [A] Wesley
 	 * @return [A] after remove(B)
 	 */
+	private IndexedUnsortedList<Integer> AB_removeB_A() {
+		IndexedUnsortedList<Integer> list = A_addToRearB_AB();
+		list.remove(ELEMENT_B);
+		return list;
+	}
+	private Scenario<Integer> AB_removeB_A = () -> AB_removeB_A();
 
 	 
 	/** Scenario #29: [A,B] -> remove(0) -> [B]
