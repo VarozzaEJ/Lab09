@@ -18,7 +18,6 @@ public class IUArrayList<E> implements IndexedUnsortedList<E> {
 	/** Creates an empty list with default initial capacity */
 	public IUArrayList() {
 		this(DEFAULT_CAPACITY);
-		System.out.println("Working??");
 	}
 	
 	/** 
@@ -117,8 +116,7 @@ public class IUArrayList<E> implements IndexedUnsortedList<E> {
 
 	@Override
 	public E get(int index) {
-		// TODO 
-		return null;
+		return this.array[index];
 	}
 
 	@Override
@@ -147,8 +145,7 @@ public class IUArrayList<E> implements IndexedUnsortedList<E> {
 
 	@Override
 	public E last() {
-		// TODO 
-		return null;
+		return array[rear - 1];
 	}
 
 	@Override
@@ -158,14 +155,12 @@ public class IUArrayList<E> implements IndexedUnsortedList<E> {
 
 	@Override
 	public boolean isEmpty() {
-		// TODO 
-		return false;
+		return this.size() == 0;
 	}
 
 	@Override
 	public int size() {
-		// TODO 
-		return 0;
+		return array.length;
 	}
 
 	@Override
