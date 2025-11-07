@@ -18,7 +18,7 @@ public class IUArrayList<E> implements IndexedUnsortedList<E> {
 	/** Creates an empty list with default initial capacity */
 	public IUArrayList() {
 		this(DEFAULT_CAPACITY);
-		System.out.println("Test");
+		System.out.println("Working??");
 	}
 	
 	/** 
