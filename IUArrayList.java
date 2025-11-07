@@ -160,8 +160,14 @@ public class IUArrayList<E> implements IndexedUnsortedList<E> {
 
 	@Override
 	public int size() {
-		return array.length;
-		//this wont work actually because array.length is the number of elements the array can hold, not how many are in the array.
+		int count = 0;
+		for(int i = 0; i < array.length; i++) {
+			if(array[i] != null) {
+				count++;
+			}
+		}
+		return count;
+		//If we can add a count variable, we should do that instead!
 	}
 
 	@Override
