@@ -399,7 +399,7 @@ public class ListTester {
 	}
 	private Scenario<Integer> A_removeFirst_emptyList = () -> A_removeFirst_emptyList();
 
-	/** Scenario #13: [A] -> removeLast() -> [] Gabe
+	/** Scenario #13: [A] -> removeLast() -> [] Gabe (testing)
 	 * @return [] after removeLast()
 	 */
 
