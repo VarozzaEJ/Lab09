@@ -103,14 +103,23 @@ public class IUArrayList<E> implements IndexedUnsortedList<E> {
 
 	@Override
 	public E remove(int index) {
-		// TODO 
+		E result = array[index];
+		if(result == null) {
+			throw new NoSuchElementException();
+		}
+		rear--;
+		//shift elements
+		for (int i = index; i < rear; i++) {
+			array[i] = array[i+1];
+		}
+		array[rear] = null;
 		modCount++; // DO NOT REMOVE ME
-		return null;
+		return result;
 	}
 
 	@Override
 	public void set(int index, E element) {
-		// TODO 
+		array[index] = element;
 		modCount++; // DO NOT REMOVE ME
 	}
 
@@ -139,8 +148,7 @@ public class IUArrayList<E> implements IndexedUnsortedList<E> {
 
 	@Override
 	public E first() {
-		// TODO 
-		return null;
+		return this.array[0];
 	}
 
 	@Override
@@ -162,6 +170,15 @@ public class IUArrayList<E> implements IndexedUnsortedList<E> {
 	public int size() {
 		return this.rear;
 	}
+
+	//NOTE these methods might not be needed since we don't have a circular array.
+	// private int increment(int index) {
+    //     return (index + 1) % array.length;
+    // }
+
+    // private int decrement(int index) {
+    //     return (index == 0) ? array.length - 1 : index - 1;
+    // }
 
 	@Override
 	public String toString() {
