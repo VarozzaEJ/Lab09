@@ -159,6 +159,9 @@ public class IUArrayList<E> implements IndexedUnsortedList<E> {
 
 	@Override
 	public E remove(int index) {
+		if(index < 0 || index >= rear) {
+			throw new IndexOutOfBoundsException();
+		}
 		E result = array[index];
 		if(result == null) {
 			throw new NoSuchElementException();
@@ -175,12 +178,18 @@ public class IUArrayList<E> implements IndexedUnsortedList<E> {
 
 	@Override
 	public void set(int index, E element) {
+		if(index < 0 || index >= rear) {
+			throw new IndexOutOfBoundsException();
+		}
 		array[index] = element;
 		modCount++; // DO NOT REMOVE ME
 	}
 
 	@Override
 	public E get(int index) {
+		if(index < 0 || index >= rear) {
+			throw new IndexOutOfBoundsException();
+		}
 		return this.array[index];
 	}
 
@@ -204,11 +213,18 @@ public class IUArrayList<E> implements IndexedUnsortedList<E> {
 
 	@Override
 	public E first() {
-		return this.array[0];
+		E retVal = this.array[0];
+		if(retVal == null) {
+			throw new NoSuchElementException();
+		}
+		return retVal;
 	}
 
 	@Override
 	public E last() {
+		if(rear == 0) {
+			throw new NoSuchElementException();
+		}
 		return this.array[rear - 1];
 	}
 
