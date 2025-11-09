@@ -127,6 +127,9 @@ public class IUArrayList<E> implements IndexedUnsortedList<E> {
 	//Can someone look over this?
 	@Override
 	public E removeLast() {
+		if(rear == 0) {
+			throw new NoSuchElementException();
+		}
 		if(array[rear - 1] == null) {
 			throw new NoSuchElementException();
 		}
