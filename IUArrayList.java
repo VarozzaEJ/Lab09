@@ -107,18 +107,34 @@ public class IUArrayList<E> implements IndexedUnsortedList<E> {
 		modCount++; // DO NOT REMOVE ME
 	}
 
+	//Can someone look over this?
 	@Override
 	public E removeFirst() {
-		// TODO 
+		if(array[0] == null) {
+			throw new NoSuchElementException();
+		}
+		E retVal = array[0];
+		array[0] = null;
+		//shift elements
+		for (int i = 0; i < rear - 1; i++) {
+			array[i] = array[i+1];
+		}
+		rear--;
 		modCount++; // DO NOT REMOVE ME
-		return null;
+		return retVal;
 	}
 
+	//Can someone look over this?
 	@Override
 	public E removeLast() {
-		// TODO 
+		if(array[rear - 1] == null) {
+			throw new NoSuchElementException();
+		}
+		E retVal = array[rear - 1];
+		array[rear - 1] = null;
+		rear--;
 		modCount++; // DO NOT REMOVE ME
-		return null;
+		return retVal;
 	}
 
 	@Override
