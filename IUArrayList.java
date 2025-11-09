@@ -239,7 +239,12 @@ public class IUArrayList<E> implements IndexedUnsortedList<E> {
 	@Override
 	public String toString() {
 		String result = "[";
-		// TODO
+		for (int i = 0; i < rear; i++) {
+			result += array[i];
+			if (i < rear - 1) {
+				result += ", ";
+			}
+		}
 		return result + "]";
 	}
 
